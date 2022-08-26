@@ -1,0 +1,32 @@
+ALGORITHM Dot product 
+VAR
+    pr  , n INTEGER
+    vect1 : ARRAY_OF INTEGER[2];
+    vect2: ARRAY_OF INTEGER[2];
+    
+
+
+FUNCTION dot_produit (v1: ARRAY_OF INTEGER[2];, v2 : ARRAY_OF INTEGER[2]; ) : return_type INTEGER
+VAR
+    ps INTEGER;
+BEGIN
+    FOR i FROM 0 TO 2 STEP 1  DO
+        ps := ps + v1[i]*v2[i];
+    END_FOR
+    RETURN ps  ;
+END    
+BEGIN
+   Write ("donner le nombre des vecteur");
+   Read (n);
+   Write("donner le premier vecteur ");
+   Read(vect1);
+   Write("donner le deuxiéme  vecteur ");
+   Read(vect2);
+   pr := dot_produit(vect1,vect2);
+   IF (pr==0) THEN
+    Write ("vecteurs orthognaux ");
+   ELSE
+    Write ("vecteur ne sont pas orthognaux");
+   END_IF
+
+END
