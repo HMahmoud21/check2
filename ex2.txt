@@ -1,0 +1,23 @@
+ALGORITHM  insertion_sort 
+VAR
+    tab1: ARRAY_OF INTEGER[20];
+    tab2 : ARRAY_OF INTEGER[20];
+    i,j : INTEGER
+BEGIN
+    Write ("donner un tableau ");
+    Read (tab1);
+
+    FOR i FROM 1 TO tab1.length STEP 1  DO
+        arr:=tab1[i];
+        j:=i-1;
+        WHILE (j>=0 AND tab2[j]> arr) DO
+                  tab2[j + 1] = tab2[j]; 
+            j = j - 1; 
+        
+        tab2[j + 1] =arr;
+        END_WHILE
+        
+    END_FOR
+    Read(tab2); 
+
+END
